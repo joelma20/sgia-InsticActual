@@ -178,7 +178,7 @@
         <counts>
           <entry key="css" value="2" />
           <entry key="env" value="1" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="js" value="2" />
           <entry key="php" value="12" />
           <entry key="twig" value="24" />
@@ -190,7 +190,7 @@
           <entry key="CSS" value="2" />
           <entry key="JavaScript" value="2" />
           <entry key="PHP" value="12" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Twig" value="24" />
           <entry key="YAML" value="2" />
         </counts>
@@ -215,7 +215,17 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="8" selection-start-line="8" selection-end-line="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -604,15 +614,16 @@
       <workItem from="1625236976990" duration="4825000" />
       <workItem from="1625258894706" duration="591000" />
       <workItem from="1625308245976" duration="1252000" />
-      <workItem from="1625311289341" duration="12482000" />
+      <workItem from="1625311289341" duration="13426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370660000" />
+    <option name="totallyTimeSpent" value="371604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.50402576" side_tool="true" weight="0.21709532" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -990,8 +1001,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="136">
+          <caret line="8" column="8" selection-start-line="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
