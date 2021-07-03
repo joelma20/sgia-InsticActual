@@ -178,6 +178,7 @@
         <counts>
           <entry key="css" value="2" />
           <entry key="env" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="js" value="2" />
           <entry key="php" value="12" />
           <entry key="twig" value="24" />
@@ -189,7 +190,7 @@
           <entry key="CSS" value="2" />
           <entry key="JavaScript" value="2" />
           <entry key="PHP" value="12" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="Twig" value="24" />
           <entry key="YAML" value="2" />
         </counts>
@@ -478,6 +479,11 @@
               <item name="SGIA ACTUAL" type="b2602c69:ProjectViewProjectNode" />
               <item name="SGIA ACTUAL" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SGIA ACTUAL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SGIA ACTUAL" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -598,12 +604,12 @@
       <workItem from="1625236976990" duration="4825000" />
       <workItem from="1625258894706" duration="591000" />
       <workItem from="1625308245976" duration="1252000" />
-      <workItem from="1625311289341" duration="11985000" />
+      <workItem from="1625311289341" duration="12482000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370163000" />
+    <option name="totallyTimeSpent" value="370660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
@@ -659,9 +665,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/img/estudante/60da0e374a2ee823180762.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Professor/DisciplinaProfessoreTurmaController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1028" />
@@ -982,6 +985,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
