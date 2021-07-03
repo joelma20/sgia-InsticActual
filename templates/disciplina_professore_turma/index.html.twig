@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Disciplina Professor-Turma index{% endblock %}
+
+{% block body %}
+
+<div class="row-cols-lg-1">
+<h3>Listar Disciplina Professor-Turma</h3>
+    <a href="{{ path('disciplina_professore_turma_new') }}" class="btn btn-sm btn-primary">Criar Novo</a>
+
+    <div class="card my-2">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-sm mb-0 table-striped">
+                    <thead>
+                    <tr>
+                        <th class="px-5 py-3">Ano Lectivo</th>
+                        <th class="py-3">Curso</th>
+                        <th class="py-3">Ano Acadêmico</th>
+                        <th class="py-3">Semestre</th>
+                        <th class="py-3">Turma</th>
+                        <th class="py-3">Disciplina</th>
+                        <th class="py-3">Professor</th>
+                        <th class="py-3">Acções</th>
+                    </tr>
+                    </thead>
+
+                    </thead>
+                    <tbody id="customers">
+        {% for disciplina_professore_turma in disciplina_professore_turmas %}
+            <tr class="btn-reveal-trigger">
+
+
+                <td class="py-2">{{ disciplina_professore_turma.Turma.anoAcademico.curso.anoLectivo }}</td>
+                <td class="py-2">{{ disciplina_professore_turma.Turma.anoAcademico.curso.getNomeCurso() }}</td>
+                <td class="py-2">{{ disciplina_professore_turma.Turma.anoAcademico.getNomeAnoAcademico()}}</td>
+                <td class="py-2">{{ disciplina_professore_turma.Disciplina.semestre.getNomeSemestre()}}</td>
+                <td class="py-2">{{ disciplina_professore_turma.Turma.getNomeTurma()}}</td>
+                <td class="py-2">{{ disciplina_professore_turma.Disciplina.getNomeDiscilpina()}}</td>
+                <td class="py-2">{{ disciplina_professore_turma.Professore  }}</td>
+                <td>
+                    <a href="{{ path('disciplina_professore_turma_show', {'id': disciplina_professore_turma.id}) }}" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
+                    <a href="{{ path('disciplina_professore_turma_edit', {'id': disciplina_professore_turma.id}) }}" class="btn btn-sm btn-secondary"><i class="fas fa-edit"></i></a>
+                    <a href="{{path('disciplina_professore_turma_delete', {'id': disciplina_professore_turma.id})}}" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="5">no records found</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

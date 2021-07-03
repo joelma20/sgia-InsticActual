@@ -1,0 +1,13 @@
+{{ form_start(form) }}
+
+<tr>
+    <button class="btn btn-sm btn-success"><i class="la la-save"></i> {{ button_label|default('Guardar') }}</button>
+    <a href="{{ path('EstudanteTurma_Estudantes', {'idT': turma.id}) }}" class="btn btn-sm btn-primary"><i class="la la-list"></i> Voltar a Lista</a>
+</tr>
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
+
+
+
+

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mostrar Turma{% endblock %}
+
+{% block body %}
+    <h1>Mostrar Turma</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                {{ include('turma/_delete_form.html.twig') }}
+                <a href="{{ path('turma_index') }}" class="btn btn-sm btn-primary"><i class="la la-list"></i> Voltar a Lista</a>
+                <a href="{{ path('turma_edit', {'id': turma.id}) }}"class="btn btn-sm btn-secondary"><i class="la la-edit"></i> Editar</a>
+
+                <th>Id</th>
+                <td>{{ turma.id }}</td>
+            </tr>
+            <tr>
+                <th>Nome Turma</th>
+                <td>{{ turma.nomeTurma }}</td>
+            </tr>
+            <tr>
+                <th>Delegado</th>
+                <td>{{ turma.delegado }}</td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td>{{ turma.email }}</td>
+            </tr>
+            <tr>
+                <th>Telefone</th>
+                <td>{{ turma.phone }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

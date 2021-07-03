@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Increver Estudante{% endblock %}
+
+{% block body %}
+    <h3>Inscrever Estudante</h3>
+
+    {{ include('ConfirmarMatricula/_form.html.twig', {'button_label': 'Actualiar'}) }}
+
+{% endblock %}

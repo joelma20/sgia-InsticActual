@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mostrar Professor{% endblock %}
+
+{% block body %}
+
+
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h4> Dados do Professor {{ professor.nome }}</h4>
+                <div class="card-body">
+                    <table class="table table-sm ">
+                        <tbody>
+                        <tr>
+                            {{ include('professor/_delete_form.html.twig') }}
+                            <a href="{{ path('professor_index') }}" class="btn btn-sm btn-primary mr-2 ml-2"><i class="fas fa-list"></i>Voltar a Lista</a>
+                            <a href="{{ path('professor_edit', {'id': professor.id}) }}" class="btn btn-sm btn-secondary"><i class="fas fa-edit"></i>Editar</a>
+
+                        </tr>
+                        <tr>
+                            <th>Nome</th>
+                            <td>{{ professor.nome }}</td>
+                        </tr>
+                        <tr>
+                            <th>Telefone</th>
+                            <td>{{ professor.telefone }}</td>
+                        </tr>
+                        <tr>
+                            <th>E-mail</th>
+                            <td>{{ professor.email }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}

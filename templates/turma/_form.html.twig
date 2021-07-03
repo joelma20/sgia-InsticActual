@@ -1,0 +1,11 @@
+{{ form_start(form) }}
+
+<tr>
+    <button class="btn btn-sm btn-success"><i class="fa-accessible-icon"></i> {{ button_label|default('Guardar') }}</button>
+    <a href="{{ path('turma_index') }}" class="btn btn-sm btn-primary"><i class="la la-list"></i> Voltar a Lista</a>
+</tr>
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
+
+

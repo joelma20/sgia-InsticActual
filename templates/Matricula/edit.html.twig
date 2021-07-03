@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Matrícula{% endblock %}
+
+{% block body %}
+    <h3>Editar Matrícula</h3>
+
+    {{ include('Matricula/_form.html.twig', {'button_label': 'Actualizar'}) }}
+
+    <a href="{{ path('Matricula_index') }}">Voltar a Lista</a>
+
+{% endblock %}
+
+
+

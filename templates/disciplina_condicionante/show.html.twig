@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DisciplinaCondicionante{% endblock %}
+
+{% block body %}
+    <h1>DisciplinaCondicionante</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ disciplina_condicionante.id }}</td>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <td>{{ disciplina_condicionante.nome }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('disciplina_condicionante_index') }}">back to list</a>
+
+    <a href="{{ path('disciplina_condicionante_edit', {'id': disciplina_condicionante.id}) }}">edit</a>
+
+    {{ include('disciplina_condicionante/_delete_form.html.twig') }}
+{% endblock %}

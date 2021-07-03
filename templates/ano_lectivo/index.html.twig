@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AnoLectivo index{% endblock %}
+
+{% block body %}
+<div class="col-lg-8">
+    <h3>Lista do Ano Lectivo</h3>
+
+    <a href="{{ path('ano_lectivo_new') }}" class="btn btn-sm btn-primary">Criar Novo</a>
+
+    <div class="card my-2">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-sm mb-0 table-striped">
+                    <thead>
+            <tr>
+                <th class="px-5 py-3">Nome Ano Lectivo</th>
+                <th class="py-3">Data Início</th>
+                <th class="py-3">Acções</th>
+            </tr>
+        </thead>
+                    <tbody id="customers">
+        {% for ano_lectivo in ano_lectivos %}
+            <tr class="btn-reveal-trigger">
+                <td class="py-2">{{ ano_lectivo.nomeAnoLectivo }}</td>
+                <td class="py-2">{{ ano_lectivo.dataInicio ? ano_lectivo.dataInicio|date('Y-m-d') : ''  }}</td>
+                <td>
+                    <a href="{{ path('ano_lectivo_show', {'id': ano_lectivo.id}) }}" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
+                    <a href="{{ path('ano_lectivo_edit', {'id': ano_lectivo.id}) }}" class="btn btn-sm btn-secondary"><i class="fas fa-edit"></i></a>
+                    <a href="{{path('ano_lectivo_delete', {'id': ano_lectivo.id})}}" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
+

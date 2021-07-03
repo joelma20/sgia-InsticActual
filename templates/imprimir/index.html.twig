@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ImprimirController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+
+    Formulario
+    {{ form(Formulario) }}
+
+
+Esta es turma
+    {{ dump(Turma) }}
+
+
+Estudiante
+    {{ dump(estu) }}
+Disciplina
+    {{ dump(disc) }}
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/SGIA/src/Controller/EstudanteTurmaController.phpr.php'|file_link(0) }}">src/Controller/ImprimirController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/SGIA/templates/imprimir/EstudanteTurma_index.html.twig'|file_link(0) }}">templates/imprimir/index.html.twig</a></code></li>
+    </ul>
+</div>
+{% endblock %}

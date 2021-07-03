@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ImprimirController!{% endblock %}
+
+{% block body %}
+    {{ form(Formulario) }}
+
+    <h3>Lista de Estudantes</h3>
+
+    <table class="table">
+
+        <tbody>
+        {% set varturma = '' %}
+        {% for Estudiante in Estudiantes %}
+            <tr>
+                {% if Estudiante.nome_turma != varturma %}
+                    {% set varturma = Estudiante.nome_turma %}
+        <thead>
+        <tr>
+            <th> </th>
+            <th> </th>
+        </tr>
+        <tr>
+            <th>Año Lectivo: {{ Estudiante.nome_ano_lectivo }}</th>
+            <th>Curso: {{ Estudiante.nome_curso }}</th>
+            <th>Año Academico: {{ Estudiante.nome_ano_academico }}</th>
+            <th>Semestre: {{ Estudiante.nome_semestre }}</th>
+        </tr>
+        <tr>
+            <th>Disciplina: {{ Estudiante.nome_discilpina }}</th>
+            <th>Turma: {{ Estudiante.nome_turma }}</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+        </thead>
+
+                {% endif%}
+
+            </tr>
+            <tr>
+                <td>{{ Estudiante.nome_estudiante }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

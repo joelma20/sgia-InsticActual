@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Disciplina{% endblock %}
+
+{% block body %}
+<div class="col-sm-8">
+    <div class="card">
+        <div class="card-header">
+            <h4> Disciplina {{ dicsiplina.getNomeDiscilpina()}}</h4>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <tbody>
+
+                    <tbody>
+                    <tr>
+                        {{ include('dicsiplina/_delete_form.html.twig') }}
+                        <a href="{{ path('dicsiplina_index') }}" class="btn btn-sm btn-primary mr-2 ml-2"><i class="fas fa-list"></i>Voltar a Lista</a>
+                        <a href="{{ path('dicsiplina_edit', {'id':dicsiplina.id}) }}" class="btn btn-sm btn-secondary"><i class="fas fa-edit"></i>Editar</a>
+                    </tr>
+                    <tr>
+                        <th>Nome Disciplina</th>
+                        <td>{{ dicsiplina.nomeDisciplina}}</td>
+                    </tr>
+                    <tr>
+                        <th>Qtd de Horas</th>
+                        <td>{{ dicsiplina.cantHoras}}</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}
+
+
+

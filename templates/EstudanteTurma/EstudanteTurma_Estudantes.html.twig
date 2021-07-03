@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mostrar Estudante-Turma{% endblock %}
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ano Lectivo</th>
+                <td>{{ turma.anoAcademico.curso.anoLectivo }}</td>
+            </tr>
+            <tr>
+                <th>Curso</th>
+                <td>{{ turma.anoAcademico.curso.getNomeCurso() }}</td>
+            </tr>
+            <tr>
+                <th>Ano Acadêmico</th>
+                <td>{{ turma.anoAcademico.getNomeAnoAcademico() }}</td>
+            </tr>
+            <tr>
+                <th>Semestre</th>
+                <td>{{ turma.semestre.getNomeSemestre() }}</td>
+            </tr>
+            <tr>
+                <th>Turma</th>
+                <td>{{ turma.getNomeTurma() }}</td>
+            </tr>
+        </thead>
+    </table>
+    <a href="{{ path('relatorio') }}" class="btn btn-sm btn-primary">imprimir</a>
+    <table class="table">
+        <thead>
+            <th>Nº Processo</th>
+            <th>Nome do Estudante</th>
+        </thead>
+        <tbody>
+        {% for estudiante in turma.estudiantes %}
+            <tr>
+                <td>{{ estudiante.NumProcesso }}</td>
+                <td>{{ estudiante.nomeEstudiante }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

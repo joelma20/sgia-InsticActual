@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit DisciplinaCondicionante{% endblock %}
+
+{% block body %}
+    <h1>Edit DisciplinaCondicionante</h1>
+
+    {{ include('disciplina_condicionante/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('disciplina_condicionante_index') }}">back to list</a>
+
+    {{ include('disciplina_condicionante/_delete_form.html.twig') }}
+{% endblock %}

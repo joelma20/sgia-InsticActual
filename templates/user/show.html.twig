@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Motrar Usuário{% endblock %}
+
+{% block body %}
+<div class="col-sm-8">
+    <div class="card">
+        <div class="card-header">
+
+            <h4> Usuário {{ user.username }}</h4>
+            <div class="card-body">
+                <table class="table table-sm ">
+                    <tbody>
+
+                    <tbody>
+                    <tr>
+                        {{ include('user/_delete_form.html.twig') }}
+                        <a href="{{ path('user_index') }}" class="btn btn-sm btn-primary mr-2 ml-2"><i class="fas fa-list"></i>Voltar a Lista</a>
+                        <a href="{{ path('user_edit', {'id': user.id}) }}" class="btn btn-sm btn-secondary"><i class="fas fa-edit"></i>Editar</a>
+                    </tr>
+                    <tr>
+                        <th>Nome Usuário</th>
+                        <td>{{ user.username}}</td>
+                    </tr>
+                    <tr>
+                        <th>Papel</th>
+                        <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nome</th>
+                        <td>{{  user.name   }}</td>
+                    </tr>
+                    <tr>
+                        <th>Está Activo</th>
+                        <td>{{ user.IsActive ? 'Yes' : 'No'}}</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}
+
+
+

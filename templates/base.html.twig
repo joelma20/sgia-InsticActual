@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{% block title %}SGIA-INSTIC!{% endblock %}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+    <meta name="author" content="Codedthemes" />
+
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Favicon icon -->
+    <link rel="icon" href="{{asset("admin/assets/images/favicon.ico") }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{asset("admin/assets/pages/waves/css/waves.min.css") }}" type="text/css" media="all">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="{{asset("admin/assets/css/bootstrap/css/bootstrap.min.css") }}">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="{{asset("admin/assets/pages/waves/css/waves.min.css") }}" type="text/css" media="all">
+    <!-- themify icon -->
+    <link rel="stylesheet" type="text/css" href="{{asset("admin/assets/icon/themify-icons/themify-icons.css") }}">
+    <!-- font-awesome-n -->
+    <link rel="stylesheet" type="text/css" href="{{asset("admin/assets/css/font-awesome-n.min.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{asset("admin/assets/css/font-awesome.min.css") }}">
+    <!-- scrollbar.css -->
+    <link rel="stylesheet" type="text/css" href="{{asset("admin/assets/css/jquery.mCustomScrollbar.css") }}">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="{{asset("admin/assets/css/style.css") }}">
+    {% endblock %}
+
+    {% block javascripts %}
+
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="{{asset("admin/assets/js/jquery/jquery.min.js ") }}"></script>
+    <script type="text/javascript" src="{{asset("admin/assets/js/jquery-ui/jquery-ui.min.js ") }}"></script>
+    <script type="text/javascript" src="{{asset("admin/assets/js/popper.js/popper.min.js") }}"></script>
+    <script type="text/javascript" src="{{asset("admin/assets/js/bootstrap/js/bootstrap.min.js ") }}"></script>
+    <!-- waves js -->
+    <script src="{{asset("admin/assets/pages/waves/js/waves.min.js") }}"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="{{asset("admin/assets/js/jquery-slimscroll/jquery.slimscroll.js") }}"></script>
+
+    <!-- slimscroll js -->
+    <script src="{{asset("admin/assets/js/jquery.mCustomScrollbar.concat.min.js ") }}"></script>
+
+    <!-- menu js -->
+    <script src="{{asset("admin/assets/js/pcoded.min.js") }}"></script>
+    <script src="{{asset("admin/assets/js/vertical/vertical-layout.min.js ") }}"></script>
+
+    <script type="text/javascript" src="{{asset("admin/assets/js/script.js ") }}"></script>
+
+    {% endblock %}
+
+</head>
+<body>
+
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="loader-track">
+        <div class="preloader-wrapper">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <nav class="navbar header-navbar pcoded-header">
+            <div class="navbar-wrapper">
+                <div class="navbar-logo">
+                    <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                        <i class="ti-menu"></i>
+                    </a>
+                    <div class="mobile-search waves-effect waves-light">
+                        <div class="header-search">
+                            <div class="main-search morphsearch-search">
+                                <div class="input-group">
+                                    <span class="input-group-prepend search-close"><i class="ti-close input-group-text"></i></span>
+                                    <input type="text" class="form-control" placeholder="Enter Keyword">
+                                    <span class="input-group-append search-btn"><i class="ti-search input-group-text"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html">
+                        <h3>SGIA-INSTIC</h3>
+                    </a>
+                    <a class="mobile-options waves-effect waves-light">
+                        <i class="ti-more"></i>
+                    </a>
+                </div>
+                <div class="navbar-container container-fluid">
+                    <ul class="nav-left">
+                        <li>
+                            <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                        </li>
+                        <li>
+                            <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                                <i class="ti-fullscreen"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav-right">
+
+                        <li class="user-profile header-notification">
+                            <a href="#!" class="waves-effect waves-light">
+                                <img src="{{asset("admin/assets/images/avatar-4.jpg")}}" class="img-radius" alt="User-Profile-Image">
+                                <span>{{ app.user.name }}</span>
+                                <i class="ti-angle-down"></i>
+                            </a>
+                            <ul class="show-notification profile-notification">
+                                {#<li class="waves-effect waves-light">
+                                    <a href="#!">
+                                        <i class="ti-settings"></i> Settings
+                                    </a>
+                                </li>
+                                <li class="waves-effect waves-light">
+                                    <a href="user-profile.html">
+                                        <i class="ti-user"></i> Profile
+                                    </a>
+                                </li>#}
+
+
+                                <li class="waves-effect waves-light">
+                                    <a href="{{ path('app_logout') }}">
+                                        <i class="ti-layout-sidebar-left"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                <nav class="pcoded-navbar">
+                    <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                    <div class="pcoded-inner-navbar main-menu">
+                        <div class="">
+                            <div class="main-menu-header">
+                                <img class="img-80 img-radius" src="{{asset("admin/assets/images/avatar-4.jpg")}}" alt="User-Profile-Image">
+
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+<br>
+
+                    <ul class="pcoded-item pcoded-left-item">
+                        {% if is_granted('ROLE_ADMIN')   %}
+
+
+                            <li class="active">
+                                <a href="{{ path('painelcontrol') }}" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                    <span class="pcoded-mtext">Painel de Controlo</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="pcoded-navigation-label">Usuario</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Administrar Usuario</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class=" ">
+                                        <a href="{{ path('user_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Listar usuario</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                    <li class=" ">
+                                        <a href="{{ path('user_new') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Adicionar Usuario</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="pcoded-navigation-label">Estrutura Acadêmica</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Estrutura Acadêmica</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+
+
+                                    <li class="pcoded-hasmenu">
+                                        <a  href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Ano Lectivo</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('ano_lectivo_index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Listar Ano Lectivo</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('ano_lectivo_new') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Adicionar Ano Lectivo</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Curso</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('curso_index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Listar Curso</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('curso_new') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Adicionar Curso</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+
+
+
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Ano Acadêmico</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('ano_academico_index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Listar Ano Acadêmico</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('ano_academico_new') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Adicionar ano Acadêmico</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Semestre</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('semestre_index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Listar Semestre</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('semestre_new') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Adicionar Semestre</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Turma</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('turma_index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Listar Turma</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('turma_new') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Adicionar Turma</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+
+
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Disciplina</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('dicsiplina_index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Listar Disciplina</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('dicsiplina_new') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Adicionar Disciplina</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                        <div class="pcoded-navigation-label">Professores</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Professores</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('professor_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Listar Professor</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('professor_new') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Adicionar Professor</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                    <li class="pcoded-hasmenu">
+                                        <a href="{{ path('disciplina_professore_turma_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Professores-Disciplinas</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                        <div class="pcoded-navigation-label">Estudantes</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Estudantes</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('Estudante_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Listar Estudantes</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="pcoded-submenu">
+
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                    <span class="pcoded-mtext">Estudante-Turma</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu">
+                                        <a href="{{ path('EstudanteTurma_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Lista de Estudante-Turma</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                 </ul>
+
+
+                        </ul>
+
+                        <div class="pcoded-navigation-label">Matrícula</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Administrar Matrícula</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('Matricula_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Realizar Matrícula</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('Matricula_new') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Validar Matrícula</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </ul>
+
+                        <div class="pcoded-navigation-label">Inscrição</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Inscrição</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('Confirmar_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Realizar Inscrição</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </ul>
+
+
+
+
+                        <div class="pcoded-navigation-label">Lista de Presença</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Lista de Presença</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('EstudanteTurma_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Lista de Presença</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                {% endif %}
+
+
+
+                                {% if is_granted('ROLE_SECRE')   %}
+
+
+                            <li class="active">
+                                <a href="{{ path('painelcontrol') }}" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                    <span class="pcoded-mtext">Painel de Controlo</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+                        <div class="pcoded-navigation-label">Estrutura Acadêmica</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Estrutura Acadêmica</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+
+
+
+
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Turma</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('turma_index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Listar Turma</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('turma_new') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Adicionar Turma</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+
+
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Disciplina</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('dicsiplina_index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Listar Disciplina</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('dicsiplina_new') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Adicionar Disciplina</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                        <div class="pcoded-navigation-label">Professores</div>
+                        <ul class="pcoded-item pcoded-left-item">
+
+                                    <li class="pcoded-hasmenu">
+                                        <a href="{{ path('disciplina_professore_turma_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Professores-Disciplinas</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                        <div class="pcoded-navigation-label">Estudantes</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Estudantes</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('Estudante_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Listar Estudantes</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="pcoded-submenu">
+
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Estudante-Turma</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="pcoded-hasmenu">
+                                                <a href="{{ path('EstudanteTurma_index') }}" class="waves-effect waves-dark">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Lista de Estudante-Turma</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                </ul>
+
+
+                        </ul>
+
+                        <div class="pcoded-navigation-label">Matrícula</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Administrar Matrícula</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('Matricula_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Realizar Matrícula</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('Matricula_new') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Validar Matrícula</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </ul>
+
+                        <div class="pcoded-navigation-label">Inscrição</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Inscrição</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('Confirmar_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Realizar Inscrição</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </ul>
+
+
+
+
+                        <div class="pcoded-navigation-label">Lista de Presença</div>
+                        <ul class="pcoded-item pcoded-left-item">
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon"><i class="ti-user"></i><b>BC</b></span>
+                                    <span class="pcoded-mtext">Lista de Presença</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class="pcoded-hasmenu ">
+                                        <a href="{{ path('EstudanteTurma_index') }}" class="waves-effect waves-dark">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Lista de Presença</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                {% endif %}
+                        </ul>
+
+                        {# old menu inicio #}
+
+
+                        {# old menu fin #}
+
+
+
+                    </div>
+                </nav>
+
+                <div class="pcoded-content">
+                    <!-- Page-header start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Sistema de Gestão de Informação Acadêmica</h5>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page-header end -->
+                    <div class="pcoded-inner-content">
+                        <!-- Main-body start -->
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <div class="page-body">
+                                    {% block body %}
+
+                                    {% endblock %}
+                                </div>
+                                <div id="styleSelector"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirmar Estudante{% endblock %}
+
+{% block body %}
+
+
+
+ <div class="col-sm-12">
+    <div class="card">
+        <div class="card-header">
+
+            <h4> Confirmar {{estudiante.nomeEstudiante}}</h4>
+            <div class="card-body">
+                <table class="table table-sm ">
+                    <tbody>
+
+                    <tbody>
+                    <tr>
+                        {{ include('ConfirmarMatricula/_delete_form.html.twig') }}
+                        <a href="{{ path('Confirmar_index') }}" class="btn btn-sm btn-primary mr-2 ml-2"><i class="fas fa-list"></i>Voltar a Lista</a>
+                        <a href="{{ path('Confirmar_edit', {'id': estudiante.id}) }}" class="btn btn-sm btn-secondary"><i class="fas fa-edit"></i>Editar</a>
+                    </tr>
+                    <tr>
+                        <th>Nome Estudante</th>
+                        <th>Fotografia</th>
+                        <th>Num Processo</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                        <th>BI</th>
+                        <th>Data Nascimento</th>
+                        <th>Discapacidade</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>{{ estudiante.nomeEstudiante }}</td>
+                        <td>{{ estudiante.Fotografia}}</td>
+                        <td>{{ estudiante.NumProcesso }}</td>
+                        <td>{{ estudiante.email }}</td>
+                        <td>{{ estudiante.telefone  }}</td>
+                        <td>{{ estudiante.BI }}</td>
+                        <td>{{ estudiante.DataNascimento ? estudiante.DataNascimento|date('Y-m-d') : ''}}</td>
+                        <td>{{ estudiante.Discapacidade ? 'Yes' : 'No' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</div>#}
+
+
+
+{% endblock %}
+
+

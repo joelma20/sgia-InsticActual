@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Curso index{% endblock %}
+
+{% block body %}
+<div class="col-lg-12">
+    <h3>Listar Cursos</h3>
+
+    <a href="{{ path('curso_new') }}" class="btn btn-sm btn-primary">Criar Novo</a>
+
+    <div class="card my-2">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-sm mb-0 table-striped">
+                    <thead>
+                    <tr>
+                        <th class="px-5 py-3">Nome Curso</th>
+                        <th class="py-3">Coordenador</th>
+                        <th class="py-3">E-mail</th>
+                        <th class="py-3">Telefone</th>
+                        <th class="py-3">Acções</th>
+                    </tr>
+        </thead>
+
+                    </thead>
+                    <tbody id="customers">
+                    {% for curso in cursos %}
+                        <tr class="btn-reveal-trigger">
+                            <td class="py-2">{{ curso.nomeCurso }}</td>
+                            <td class="py-2">{{ curso.Coordinador }}</td>
+                            <td class="py-2">{{ curso.email }}</td>
+                            <td class="py-2">{{ curso.phone  }}</td>
+                            <td>
+                                <a href="{{ path('curso_show', {'id': curso.id}) }}" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
+                                <a href="{{ path('curso_edit', {'id': curso.id}) }}" class="btn btn-sm btn-secondary"><i class="fas fa-edit"></i></a>
+                                <a href="{{path('curso_delete', {'id': curso.id})}}" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="5">no records found</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New DisciplinaCondicionante{% endblock %}
+
+{% block body %}
+    <h1>Create new DisciplinaCondicionante</h1>
+
+    {{ include('disciplina_condicionante/_form.html.twig') }}
+
+    <a href="{{ path('disciplina_condicionante_index') }}">back to list</a>
+{% endblock %}

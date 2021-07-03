@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Disciplina Professor-Turma{% endblock %}
+
+{% block body %}
+<div class="col-sm-7">
+<div class="card">
+    <div class="card-header">
+        <h4> Disciplina {{ disciplina_professore_turma.id ()}}</h4>
+        <div class="card-body">
+            <table class="table table-sm">
+                <tbody>
+
+                <tbody>
+                <tr>
+
+                    {{ include('disciplina_professore_turma/_delete_form.html.twig') }}
+                    <a href="{{ path('disciplina_professore_turma_index') }}" class="btn btn-sm btn-primary mr-2 ml-2"><i class="fas fa-list"></i>Voltar a Lista</a>
+                    <a href="{{ path('disciplina_professore_turma_edit', {'id':disciplina_professore_turma.id}) }}" class="btn btn-sm btn-secondary"><i class="fas fa-edit"></i>Editar</a>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+    </div>
+
+{% endblock %}
+
+

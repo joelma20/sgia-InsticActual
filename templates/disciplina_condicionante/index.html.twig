@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DisciplinaCondicionante index{% endblock %}
+
+{% block body %}
+    <h1>DisciplinaCondicionante index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for disciplina_condicionante in disciplina_condicionantes %}
+            <tr>
+                <td>{{ disciplina_condicionante.id }}</td>
+                <td>{{ disciplina_condicionante.nome }}</td>
+                <td>
+                    <a href="{{ path('disciplina_condicionante_show', {'id': disciplina_condicionante.id}) }}">show</a>
+                    <a href="{{ path('disciplina_condicionante_edit', {'id': disciplina_condicionante.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('disciplina_condicionante_new') }}">Create new</a>
+{% endblock %}
